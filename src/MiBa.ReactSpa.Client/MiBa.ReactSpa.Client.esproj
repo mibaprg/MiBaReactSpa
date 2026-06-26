@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <StartupObject />
+    <RootNamespace>MiBa.ReactSpa.Client</RootNamespace>
+    <AssemblyName>MiBa.ReactSpa.Client</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="**\*.tsx" />
+    <Content Include="**\*.ts" />
+    <Content Include="**\*.jsx" />
+    <Content Include="**\*.js" />
+    <Content Include="**\*.css" />
+    <Content Include="**\*.html" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" Condition="Exists('tsconfig.json')" />
+  </ItemGroup>
+</Project>

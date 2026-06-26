@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="MiBa.ReactSpa.Server/MiBa.ReactSpa.Server.csproj" />
+  <Project Path="MiBa.ReactSpa.Client/MiBa.ReactSpa.Client.esproj" />
+</Solution>

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Server",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build server",
+      "program": "${workspaceFolder}/src/MiBa.ReactSpa.Server/bin/Debug/net10.0/MiBa.ReactSpa.Server.dll",
+      "cwd": "${workspaceFolder}/src/MiBa.ReactSpa.Server",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "Launch Client",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "MiBa.ReactSpa.Client"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Server + Client",
+      "configurations": ["Launch Server", "Launch Client"]
+    }
+  ]
+}
